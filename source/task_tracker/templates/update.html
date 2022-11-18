@@ -4,6 +4,10 @@
 Update
 {% endblock %}
 
+{% block menu %}
+    <li class="nav-item"><a class="nav-link" href="{% url 'view_task' task.id %}">К задаче</a></li>
+{% endblock %}
+
 {% block content %}
     <form action="{% url 'update_task' task.id %}" method="POST">
         {% include 'partial/form_template.html' with button_text="сохранить" %}
