@@ -10,7 +10,7 @@ Update
 {% endblock %}
 
 {% block content %}
-    <form action="{% url 'update_task' task.id %}" method="POST">
+    <form action="{% url 'update_task' task.id %}" method="POST" class="mt-5">
         {% include 'partial/form_template.html' with button_text="сохранить" %}
     </form>
 {% endblock %}

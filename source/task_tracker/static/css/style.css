@@ -38,10 +38,11 @@ a.delete_no_link:active {
     border-left: 1px solid #333333;
 }
 
-a.links {
+h5.a.links {
+    font: bold 15px Arial;
     text-decoration: none;
 }
 
-a.links:hover {
+h5.a.links:hover {
     background-color: #d6d6d6;
 }
