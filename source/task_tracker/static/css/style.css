@@ -37,3 +37,11 @@ a.delete_no_link:active {
     border-bottom: 1px solid #CCCCCC;
     border-left: 1px solid #333333;
 }
+
+a.links {
+    text-decoration: none;
+}
+
+a.links:hover {
+    background-color: #d6d6d6;
+}

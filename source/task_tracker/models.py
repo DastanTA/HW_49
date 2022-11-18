@@ -1,23 +1,15 @@
 from django.db import models
 
 
-TYPE_CHOICES = [('task', 'задача'), ('bug', 'ошибка'), ('enhancement', 'улучшение')]
-STATUS_CHOICES = [('new', 'новый'), ('in progress', 'в процессе'), ('done', 'выполнено')]
-
-
 class Status(models.Model):
-    status_name = models.CharField(
-        max_length=40, null=False, blank=False, choices=STATUS_CHOICES,
-        default=STATUS_CHOICES[0][0], verbose_name='название статуса')
+    status_name = models.CharField(max_length=40, null=False, blank=False, verbose_name='название статуса')
 
     def __str__(self):
         return self.status_name
 
 
 class Type(models.Model):
-    type_name = models.CharField(
-        max_length=40, null=False, blank=False, choices=TYPE_CHOICES,
-        default=TYPE_CHOICES[0][0], verbose_name='название типа')
+    type_name = models.CharField(max_length=40, null=False, blank=False, verbose_name='название типа')
 
     def __str__(self):
         return self.type_name

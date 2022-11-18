@@ -1,5 +1,7 @@
+{% load static %}
+
 {% for task in tasks %}
-    <br><h5><a href="{% url 'view_task' task.id %}">{{ task.summary }}</a></h5><br>
+    <br><h5><a class="links" href="{% url 'view_task' task.id %}">{{ task.summary }}</a></h5><br>
     <p>Тип: {{ task.type }}</p>
     <p>Статус: {{ task.status }}</p><br>
     <a href="{% url 'delete_task' task.id %}" >Удалить</a> <a href="{% url 'update_task' task.id %}" >Изменить</a>
