@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    задача
+{% endblock %}
+
+{#{% block menu %}#}
+{#    <li class="nav-item"><a class="nav-link" href="{% url 'update_task' task.id %}">Изменить</a></li>#}
+{#    <li class="nav-item"><a class="nav-link" href="{% url 'delete_task' task.id %}">Удалить</a></li>#}
+{#{% endblock %}#}
+
+{% block content %}
+    <h4>ID: {{ task.id }} - {{ task.summary }}</h4><br>
+    <p>{{ task.description }}</p><br>
+    <p>Тип: {{ task.type }}</p><br>
+    <p>Статус: {{ task.status }}</p><br>
+    <p>created at: {{ task.created_at }}</p>
+{% endblock %}
